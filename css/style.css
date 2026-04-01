@@ -1,0 +1,986 @@
+/* common style */
+:root {
+    --back-color: #B0BBBA;
+    --block-color: #E5E6E1;
+    --text-color: #222222;
+}
+
+/* * {
+    border: 1px solid #000;
+} */
+
+section {
+    padding: 80px 0;
+}
+
+.section-head {
+    text-align: center;
+    margin: 0 auto 60px;
+}
+
+/* .container{
+    border: 1px solid red;
+} */
+
+.btn {
+    background-color: white;
+    text-transform: capitalize;
+    width: 185px;
+    height: 55px;
+    border-radius: 30px;
+    border: 1px solid;
+    transition: all .6s;
+}
+
+.btn:hover {
+    background-color: var(--back-color);
+    border: none;
+}
+
+.btn1 {
+    background-color: var(--text-color);
+    color: #fff;
+    text-transform: capitalize;
+    width: 185px;
+    height: 55px;
+    border-radius: 30px;
+    border: 1px solid;
+    transition: all .6s;
+}
+
+.btn1:hover {
+    background: var(--back-color);
+    color: var(--text-color);
+    border: none;
+}
+
+.btn2 {
+    background-color: var(--block-color);
+    color: var(--text-color);
+    text-transform: capitalize;
+    width: 185px;
+    height: 55px;
+    border-radius: 30px;
+    border: 1px solid;
+    transition: all .6s;
+}
+
+.btn2:hover {
+    background: var(--text-color);
+    color: #fff;
+}
+
+/*hedding animation*/
+.autoShow {
+    animation: text-appear 1s both;
+    animation-timeline: view();
+    animation-range: entry 25% cover 520px;
+}
+
+@keyframes text-appear {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*hedding animation end*/
+/*image animation*/
+.imageReveal {
+    animation: imageReveal both;
+    animation-timeline: view(10%);
+    animation-range: entry 25% cover 520px;
+}
+
+@keyframes imageReveal {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*image animation end*/
+/* scroll to top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background: var(--text-color);
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    /* hidden first */
+    z-index: 999;
+}
+
+.scroll-to-top {
+    animation: text-appear 1s both;
+    animation-timeline: view();
+}
+
+@keyframes text-appear {
+    from {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* scroll to top */
+
+.head {
+    width: 100%;
+    background-color: #E5E6E1;
+    padding: 40px;
+    margin: 0;
+}
+
+/* casd */
+#card {
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#card .card-item {
+    background: var(--block-color);
+    padding: 15px;
+    border-radius: 20px;
+
+    h4 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin-top: 30px;
+        margin-bottom: 80px;
+        list-style: none;
+        padding: 0;
+
+        li .fa-check {
+            margin-right: 5px;
+            color: var(--back-color);
+        }
+    }
+
+    .btn1 {
+        margin-bottom: 30px;
+    }
+}
+
+/* casd-end */
+
+
+/* menu */
+#mainMenu ul li a {
+    color: var(--text-color);
+    font-size: 15px;
+    transition: all .4s;
+}
+
+#mainMenu ul li a:hover {
+    color: #fff;
+    background: var(--text-color);
+    border-radius: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+#mainMenu ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    margin-left: 6px;
+    padding: 10x;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 6px;
+}
+
+/* banner */
+#banner {
+    background-color: var(--block-color);
+
+    h1 {
+        font-size: 58px;
+        line-height: 55px;
+    }
+
+    p {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+/* help */
+#help {
+    background: #FAFAFB;
+    padding-top: 90px;
+
+    h1 {
+        font-size: 45px;
+        padding-bottom: 25px;
+    }
+
+    p {
+        font-size: 18px;
+        padding-bottom: 25px;
+    }
+
+    #box1 {
+        background: #fff;
+        height: 250px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+
+        h4 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .fa-regular {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .inner {
+            padding-left: 25px;
+        }
+    }
+
+    #box2 {
+        background: var(--block-color);
+        height: 250px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+
+        h4 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .fa-regular {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .inner {
+            padding-left: 25px;
+        }
+    }
+
+    #box3 {
+        background: var(--back-color);
+        height: 250px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+
+        h4 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .fa-regular {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .inner {
+            padding-left: 25px;
+        }
+    }
+}
+
+/* millions */
+#millions {
+    padding-top: 90px;
+
+    h2 {
+        font-size: 70px;
+    }
+
+    p {
+        padding-top: 25px;
+        font-size: 18px;
+    }
+
+    #per {
+        p {
+            padding-top: 0;
+            padding-bottom: 20px;
+            margin-top: 0;
+            font-size: 16px;
+        }
+    }
+
+    #image {
+        position: relative;
+
+        img {
+            width: 400px;
+            height: 500px;
+        }
+    }
+}
+
+/*business*/
+#business {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    h1 {
+        font-size: 45px;
+        margin-bottom: 35px;
+    }
+
+    .para {
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+
+    .market {
+        margin-bottom: 30px;
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+/*working*/
+#working {
+    background: var(--block-color);
+    padding-top: 90px;
+}
+
+#working-content {
+    margin-top: 50px;
+    margin-bottom: 90px;
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .para2 {
+        font-size: 16px;
+    }
+
+    img {
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .img-para {
+        font-size: 16px;
+    }
+
+    .btn1 {
+        margin-top: 40px;
+    }
+}
+
+/*happy-clients*/
+#happy-clients {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .small {
+        margin: 0;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    #box {
+        background: var(--block-color);
+        margin-top: 30px;
+        padding: 40px;
+        border-radius: 10px;
+
+        .para3 {
+            font-size: 17px;
+        }
+    }
+
+    .person {
+        margin: 30px;
+        align-items: center;
+
+        img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+}
+
+/*owners*/
+#owners {
+    padding-top: 40px;
+    padding-bottom: 90px;
+
+    h1 {
+        margin-bottom: 50px;
+    }
+}
+
+/*footer*/
+#footer {
+    background: var(--text-color);
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .p1 {
+        margin-top: 20px;
+        font-size: 22px;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    div {
+        a {
+            color: #fff;
+        }
+    }
+
+    .social {
+        padding-top: 40px;
+        padding-bottom: 80px;
+        font-size: 20px;
+    }
+
+    ul {
+        list-style: none;
+        margin-bottom: 60px;
+
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    #f-btn {
+        background-color: var(--text-color);
+        color: #fff;
+        text-transform: capitalize;
+        width: 185px;
+        height: 50px;
+        border-radius: 30px;
+        border: 1px solid #fff;
+        transition: all .6s;
+        margin-bottom: 60px;
+
+        .fa-message {
+            padding-left: 3px;
+        }
+    }
+
+    #f-btn:hover {
+        color: var(--text-color);
+        background: var(--block-color);
+    }
+
+    .privacy {
+        a {
+            text-decoration: none;
+        }
+    }
+
+    #sub {
+        background: var(--text-color);
+        height: 50px;
+        width: 90%;
+        border-radius: 30px;
+        border: 1px solid #fff;
+        gap: auto;
+        margin-top: 60px;
+        margin-bottom: 20px;
+
+        input {
+            color: #fff;
+            background: var(--text-color);
+            border-radius: 20px;
+            margin-left: 20px;
+            border: none;
+            width: 50%;
+            height: 30px;
+        }
+
+        input:focus {
+            outline: 0;
+        }
+
+        .f-btn2 {
+            height: 42px;
+            width: 25%;
+            border-radius: 20px;
+            transition: all .6s;
+            margin-right: 4px;
+        }
+
+        .f-btn2:hover {
+            color: var(--text-color);
+            background: var(--back-color);
+
+        }
+    }
+}
+
+@media screen and (max-width: 1196px) {
+    #banner {
+        h1 {
+            line-height: 60px;
+        }
+    }
+}
+
+/*media query small screen*/
+@media screen and (max-width: 768px) {
+    #banner {
+        h1 {
+            font-size: 35px;
+            line-height: 40px;
+        }
+
+        p {
+            line-height: 5px;
+            margin: 5px;
+            padding: 20px;
+        }
+    }
+
+    /*help*/
+    #help {
+        padding-top: 40px;
+
+        h1 {
+            font-size: 35px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 10px;
+        }
+    }
+
+    /* millions */
+    #millions {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        h1 {
+            font-size: 35px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        #image {
+            padding-top: 15px;
+        }
+    }
+
+    /* business*/
+    #business {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        h1 {
+            font-size: 35px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 5px;
+            margin: 0;
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+    /*working*/
+    #working {
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        h1 {
+            font-size: 35px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 5px;
+            margin: 0;
+        }
+    }
+
+    /*happy clients*/
+    #happy-clients {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        h1 {
+            font-size: 35px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 5px;
+            margin: 0;
+        }
+
+        .person {
+            margin: 10px;
+        }
+
+        #box {
+            padding: 30px;
+        }
+    }
+
+    /*owners*/
+    #owners {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+/*media query xx small screen*/
+@media screen and (max-width: 576px) {
+
+    .btn {
+        background-color: white;
+        text-transform: capitalize;
+        width: 150px;
+        height: 45px;
+        border-radius: 30px;
+        border: 1px solid;
+    }
+
+    .btn1 {
+        background-color: var(--text-color);
+        color: #fff;
+        text-transform: capitalize;
+        width: 150px;
+        height: 45px;
+        border-radius: 30px;
+        border: 1px solid;
+        font-size: 14px;
+    }
+
+    .btn2 {
+        background-color: var(--block-color);
+        color: var(--text-color);
+        text-transform: capitalize;
+        width: 150px;
+        height: 45px;
+        border-radius: 30px;
+        border: 1px solid;
+    }
+
+    /*banner*/
+    #banner {
+        padding: 0;
+
+        h1 {
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+            line-height: 25px;
+        }
+
+        p {
+            line-height: 20px;
+            margin: 5px;
+            padding: 5px;
+            font-size: 13px;
+        }
+    }
+
+    /*help*/
+    #help {
+        padding-top: 15px;
+
+        h1 {
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+            line-height: 25px;
+        }
+
+        p {
+            font-size: 13px;
+            padding: 0;
+            margin: 0;
+        }
+
+        #box1,
+        #box2,
+        #box3 {
+            margin-top: 15px;
+            height: 180px;
+            border-radius: 10px;
+
+            h4 {
+                font-size: 20px;
+                margin: 5px;
+                padding: 0;
+            }
+
+            .fa-regular {
+                font-size: 20px;
+                margin: 5px;
+                padding: 0;
+            }
+        }
+    }
+
+    /* millions */
+    #millions {
+        padding-top: 10px;
+        padding-bottom: 0px;
+
+        h1 {
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 13px;
+            padding: 0px;
+            margin: 5px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        #image {
+            padding-top: 15px;
+        }
+    }
+
+    /* business*/
+    #business {
+        margin-top: 10px;
+        padding-bottom: 10px;
+
+        div {
+            margin-top: 4px;
+        }
+
+        h1 {
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 13px;
+            padding: 3px;
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+
+    /*working*/
+    #working {
+        h1 {
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 13px;
+            padding-bottom: 10px;
+            margin: 0;
+        }
+
+        .img-para {
+            font-size: 13px;
+            padding: 0;
+        }
+
+        img {
+            margin: 10px;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .btn1 {
+            margin: 6px;
+        }
+    }
+
+    /*happy clients*/
+    #happy-clients {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        h1 {
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 13px;
+            padding: 5px;
+            margin: 0;
+        }
+
+        .person {
+            margin: 10px;
+        }
+
+        #box {
+            padding: 12px;
+            margin-top: 20px;
+
+            .para3 {
+                font-size: 13px;
+            }
+        }
+    }
+
+    /*owners*/
+    #owners {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        h1 {
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    /*footer*/
+    #footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        h1 {
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 13px;
+            padding: 5px;
+            margin: 0;
+        }
+
+        .social {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #f-btn {
+            margin-bottom: 10px;
+        }
+
+        #sub {
+            margin-top: 15px;
+        }
+    }
+}
